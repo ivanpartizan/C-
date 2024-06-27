@@ -19,3 +19,40 @@ myLastName = Console.ReadLine();
 
 Console.WriteLine("Hello, " + myFirstName + " " + myLastName);
 Console.ReadLine();
+
+// If Decisions
+Console.WriteLine("Bob's Big Giveaway");
+Console.Write("Choose a door: 1, 2 or 3: ");
+string userValue = Console.ReadLine();
+
+string message = "";
+
+if (userValue == "1")
+{
+    message = "You won a new car!";
+}
+else if (userValue == "2")
+{
+    message = "You won a new boat!";
+}
+else if (userValue == "3")
+{
+    message = "You won a new cat!";
+}
+else
+{
+    message = "Sorry, we didn't understand! ";
+    message += "You lose!";
+}
+
+Console.WriteLine(message);
+Console.ReadLine();
+
+// Conditional Operator
+Console.WriteLine("Bob's Big Giveaway");
+Console.Write("Choose a door: 1, 2 or 3: ");
+string userValue1 = Console.ReadLine();
+
+string message1 = (userValue1 == "1") ? "boat" : "strand of lint";
+Console.WriteLine("You won a {0}.", message1);
+Console.WriteLine("You entered: {0}, therefore you won a {1}.", userValue1, message1);
