@@ -56,3 +56,14 @@ string userValue1 = Console.ReadLine();
 string message1 = (userValue1 == "1") ? "boat" : "strand of lint";
 Console.WriteLine("You won a {0}.", message1);
 Console.WriteLine("You entered: {0}, therefore you won a {1}.", userValue1, message1);
+
+// For Iteration
+for (int i = 0; i < 10; i++)
+{
+    Console.WriteLine(i);
+    if (i == 7)
+    {
+        Console.WriteLine("Found seven!");
+        break;
+    }
+}
