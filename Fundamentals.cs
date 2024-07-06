@@ -103,3 +103,40 @@ foreach (char zigChar in charArray)
 {
     Console.Write(zigChar);
 }
+
+// Defining and Calling Methods
+using System;
+
+class Program
+{
+    public static void Main(string[] args)
+    {
+        HelloWorld();
+        DisplayResult("My name is Ivan M.");
+        DisplayResult(ReverseString("Ivan") + " " + ReverseString("Milenkovic") + " " + ReverseString("Miami"));
+        DisplayResult(ReverseString("Ivan"), ReverseString("Milenkovic"), ReverseString("Miami"));
+    }
+
+    private static void HelloWorld()
+    {
+        Console.WriteLine("Hello World");
+    }
+
+    private static string ReverseString(string message)
+    {
+        char[] messageArray = message.ToCharArray();
+        Array.Reverse(messageArray);
+        return String.Concat(messageArray);
+    }
+
+    private static void DisplayResult(string firstName, string lastName, string cityName)
+    {
+        Console.Write(String.Format("{0} {1} from {2}", firstName, lastName, cityName));
+    }
+
+    private static void DisplayResult(string message)
+    {
+        Console.WriteLine(message);
+    }
+
+}
